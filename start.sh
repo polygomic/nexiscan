@@ -1,24 +1,25 @@
 #!/bin/bash
 export PATH="$PATH:/usr/local/elixir/bin"
-export SECRET_KEY_BASE=f8aiAX37M2RYjQKprkTQPoLjtlCrbLhqiFOw5ibEvj76T7IbiFoloVxTWbeENOc4
+export SECRET_KEY_BASE=10MJ+xewpW27OsmgCzZzEhDOCgAh/kJy+3UKGTHAxoFs5FKiXTehzqUVVcm63Kky
 #export ETHEREUM_JSONRPC_HTTP_URL=http://127.0.0.1:8545
 export ETHEREUM_JSONRPC_HTTP_URL="http://46.102.129.40:8545"
 export ETHEREUM_JSONRPC_TRACE_URL="http://46.102.129.40:8545" # same as json-rpc API
 export ETHEREUM_JSONRPC_WS_URL="ws://46.102.129.40:8545/ws" # websocket API of the chain
-export ACCOUNT_ENABLED=true
+#export ACCOUNT_ENABLED=true
+export ACCOUNT_ENABLED=false
 export RE_CAPTCHA_SECRET_KEY=6LcseyolAAAAAN5Z5BEbETgSzIoSFpbIbV69fzX9
 export RE_CAPTCHA_CLIENT_KEY=6LcseyolAAAAAMxBqC6iqAvkFIe-PQT7tGiAxMW_
 export COIN=NEXI
 export COIN_NAME=Nexi
-export NETWORK=Polygomic
-export SUBNETWORK=Polygomic-mainnet
+export NETWORK=Nexilix
+export SUBNETWORK=Nexilix-mainnet
 export DATABASE_URL=postgresql://nexiScanUser:nexiScanPass2023@127.0.0.1:5432/dbNexiScan
 #export ETHEREUM_JSONRPC_VARIANT=geth
 export LOGO=/images/crytoScanCyan.png
 export CHAIN_ID=4242
-export JSON_RPC=https://chain.nexi.evmnode.online
-#export BLOCKSCOUT_HOST=www.crytoscan.com
-#export BLOCKSCOUT_PROTOCOL=https
+export JSON_RPC=https://chain.nexilix.com
+export BLOCKSCOUT_HOST=www.nexiscan.com
+export BLOCKSCOUT_PROTOCOL=https
 export URL=https://www.nexiscan.com/
 export WEBAPP_URL=https://www.nexiscan.com/
 export API_PATH=/
@@ -44,6 +45,6 @@ export MIX_ENV="prod" # run in production mode
 export BLOCKSCOUT_PROTOCOL="http" # protocol to run blockscout web service on
 export HEART_COMMAND="systemctl restart nexiscan" # command used by blockscout to restart it self in case of failure
 export ADMIN_PANEL_ENABLED="true"
-export BLOCKSCOUT_IGNORED_CONTRACTS="0xc50040F393166acD4aabB8C86503d5EeFe16612e,0x4EC60d79A48798413E8d05f8D44A0a6C2D8678f9,0x4c467C9B41264D53cAd5abbbD4a878D377794Fed"
-cd /home/plgscan
+#export BLOCKSCOUT_IGNORED_CONTRACTS="0xc50040F393166acD4aabB8C86503d5EeFe16612e,0x4EC60d79A48798413E8d05f8D44A0a6C2D8678f9,0x4c467C9B41264D53cAd5abbbD4a878D377794Fed"
+cd /home/nexiscan
 /usr/local/elixir/bin/mix phx.server

@@ -2,6 +2,14 @@ import Config
 
 # DO NOT make it `:debug` or all Ecto logs will be shown for indexer
 config :logger, :console, level: :info
+config :block_scout_web, BlockScoutWeb.Endpoint,
+    http: [port: 3000],
+    https: [
+      port: 3001,
+      cipher_suite: :strong,
+      certfile: "priv/cert/selfsigned.pem",
+      keyfile: "priv/cert/selfsigned_key.pem"
+    ]
 
 config :logger, :ecto,
   level: :debug,
